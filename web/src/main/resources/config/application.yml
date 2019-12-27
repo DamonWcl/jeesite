@@ -25,7 +25,7 @@ server:
     context-path: /js
   tomcat:
     uri-encoding: UTF-8
-    
+
 #======================================#
 #========== Database sttings ==========#
 #======================================#
@@ -36,9 +36,11 @@ jdbc:
   # Mysql 数据库配置
   type: mysql
   driver: com.mysql.jdbc.Driver
+  # url: jdbc:mysql://192.168.1.250:3306/jeesite4?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
   url: jdbc:mysql://127.0.0.1:3306/jeesite?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
   username: root
-  password: 123456
+  # password: mysql
+  password: root
   testSql: SELECT 1
 
 #  # Oracle 数据库配置
@@ -157,7 +159,7 @@ spring:
   # 打印横幅
   main:
     bannerMode: "off"
-    
+
 #  # Redis 连接参数 （RedisProperties）
 #  redis:
 #    host: 127.0.0.1
@@ -517,11 +519,11 @@ logging:
 #======== FileUpload settings =========#
 #======================================#
 
-#file:
+file:
 #  enabled: true
 #
 #  # 文件上传根路径，设置路径中不允许包含“userfiles”，在指定目录中系统会自动创建userfiles目录，如果不设置默认为contextPath路径
-##  baseDir: D:/jeesite
+  baseDir: D:/jeesite
 #
 #  # 上传文件的相对路径（支持：yyyy, MM, dd, HH, mm, ss, E）
 #  uploadPath: '{yyyy}{MM}/'
